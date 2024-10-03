@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#jokoa {
+    width: 80%;
+    height: 80%;
+    background-color: #1c1e24;
+    border-radius: 10px;
+    position: relative;
+}
+
+#markagailua {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: none;
+}
+
+#jokuaren_eremua {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 60px);
+}
+
+.diana {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    cursor: pointer;
+}
+
+#menua {
+    width: 20%;
+    height: 80%;
+    background-color: #434752;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+#hobekuntzak, #mapak {
+    width: 100%;
+    text-align: center;
+    height: 45%;
+}
+
+#hobekuntza-titulua h4, #mapak-titulua h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border-bottom: 2px solid #5c6373;
+    color: #f0f0f0;
+}
+
+.hobekuntza-zerrenda, .mapa-zerrenda {
+    background-color: #5c6373;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.hobekuntza-zerrenda p, .mapa-zerrenda p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.hobekuntza-zerrenda:hover, .mapa-zerrenda:hover {
+    background-color: #798292;
+}
+
+button {
+    background-color: #61dafb;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+.bullet {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    transition: transform 0.10s ease;
+}
+ #puntu-totalak{
+    height: 5%;
+ }
