@@ -3,14 +3,16 @@ const scoreBoard = document.getElementById('puntuak');
 
 let puntuazioa = 0;
 let gameInterval;
-let speedFactor = 0.5;
+let speedFactor = 1;
+let bulletTime = 1;
 let totalPoints = 0;
 let biderkatzailea=1;
+let aurrekoSpeed;
+let bulletTimeComprado = false;
 
 startGame();
 
 function startGame() {
-    puntuazioa = 0;
     scoreBoard.textContent = puntuazioa;
     targetArea.innerHTML = ''; 
 
@@ -44,3 +46,39 @@ function createTarget() {
         diana.remove();
     });
 }
+
+function bulletTimeEvent(){
+    if (!bulletTimeComprado) {
+        console.log('No tienes Bullet Time comprado.');
+        return;
+    }
+
+    console.log('Bullet Time activado');
+    aurrekoSpeed = speedFactor;
+    speedFactor = 0.5;
+    clearInterval(gameInterval);
+
+    gameInterval = setInterval(() => {
+        let random = Math.floor(Math.random() * 3) + 1;
+        for (let i = 0; i < random; i++) {
+            createTarget();
+        }
+    }, 1000 / speedFactor);
+
+    setTimeout(() => {
+        console.log('Bullet Time desactivado');
+        speedFactor = aurrekoSpeed;
+        clearInterval(gameInterval);
+        startGame();
+    }, 10000);
+}
+
+addEventListener('keydown', function(event){
+    console.log(event.key);
+    if(event.key.toUpperCase == 'F'){
+        console.log('Se pulso la letra F');
+        bulletTimeEvent();
+    }else{
+        console.log('No se pulso la letra F');
+    }
+    });
