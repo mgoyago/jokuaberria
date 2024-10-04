@@ -75,7 +75,7 @@ function bulletTimeEvent(){
 
 addEventListener('keydown', function(event){
     console.log(event.key);
-    if(event.key.toUpperCase == 'F'){
+    if(event.key == 'F' || event.key == 'f'){
         console.log('Se pulso la letra F');
         bulletTimeEvent();
     }else{
