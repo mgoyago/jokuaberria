@@ -3,7 +3,7 @@ const scoreBoard = document.getElementById('puntuak');
 
 let puntuazioa = 0;
 let gameInterval;
-let speedFactor = 1;
+let speedFactor = 0.8;
 let bulletTime = 1;
 let totalPoints = 0;
 let biderkatzailea=1;

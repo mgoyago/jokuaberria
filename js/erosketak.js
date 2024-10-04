@@ -51,3 +51,16 @@ function hobekuntzakIzan(hobekuntzaIzena){
             console.log('Mejora desconocida');
     }
 }
+
+// Selecciona todos los elementos de mapa
+const mapaZerrendak = document.querySelectorAll('.mapa-zerrenda');
+const jokoarenEremua = document.getElementById('jokoa');
+
+mapaZerrendak.forEach(zerrenda => {
+    zerrenda.addEventListener('click', () => {
+        const mapaRuta = zerrenda.getAttribute('data-mapa');
+        jokoarenEremua.style.backgroundImage = `url(${mapaRuta})`;
+        jokoarenEremua.style.backgroundSize = 'cover'; // Asegúrate de que la imagen cubra todo el área
+        jokoarenEremua.style.backgroundPosition = 'center'; // Centra la imagen
+    });
+});
