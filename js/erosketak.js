@@ -42,10 +42,14 @@ function hobekuntzakIzan(hobekuntzaIzena){
             bulletTimeComprado = true
             break;
         case 'Kargagailua handitu':
-            console.log('Kargagailua handitu aplicado');
+            kargagailua+=2;
             break;
         case 'Karga azkarra':
-            console.log('Karga azkarra aplicado');
+            if(errekargaSpeed==5000){
+                errekargaSpeed=3250;
+            }else if(errekargaSpeed=3250){
+                errekargaSpeed=2000;
+            }
             break;
         default:
             console.log('Mejora desconocida');
@@ -78,15 +82,19 @@ function changeTargetSpeed(map) {
     switch(map) {
         case 1:
             speedFactor = 0.6;
+            lortutakoPuntuak = 1;
             break;
         case 2:
             speedFactor = 0.8;
+            lortutakoPuntuak = 2;
             break;
         case 3:
             speedFactor = 1;
+            lortutakoPuntuak = 3;
             break;
         case 4:
             speedFactor = 1.2;
+            lortutakoPuntuak = 4;
             break;
         default:
             speedFactor = 1.5;
