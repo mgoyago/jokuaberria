@@ -115,3 +115,31 @@ button:hover {
  #puntu-totalak{
     height: 5%;
  }
+
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+
+#logo-link {
+    position: absolute; 
+    top: 0;             
+    left: 0;             
+    z-index: 1000;       /
+}
+
+#logo {
+    width: 90px;
+    height: 95px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1);  
+}
